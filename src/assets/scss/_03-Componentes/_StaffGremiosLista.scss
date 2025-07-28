@@ -1,0 +1,110 @@
+/* 
+ * _StaffGremiosLista.scss
+ * Estilos para el componente StaffGremiosLista
+ * Cumple con:
+ * - Mobile-first
+ * - Breakpoints en 768px y 1024px
+ * - Sin variables o mixins
+ * - Estilos específicos para cada sección
+ */
+
+/* CONTENEDOR PRINCIPAL */
+.gremios-lista-container {
+    padding: 12px; /* Padding mínimo en mobile */
+    max-width: 1400px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centrado horizontal */
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+  
+  /* ESTADO DE CARGA */
+  .carga {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 16px;
+    color: #333; /* Color oscuro para mejor legibilidad */
+  }
+  
+  /* MENSAJE DE ERROR */
+  .error {
+    text-align: center;
+    padding: 30px 0;
+    color: #e74c3c; /* Rojo para indicar error */
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* SECCIÓN DE RESULTADOS DE BÚSQUEDA */
+  .resultados-busqueda {
+    margin: 15px 0; /* Margen superior e inferior */
+    padding: 10px;
+    background-color: #f8f9fa; /* Fondo gris claro */
+    border-radius: 6px; /* Bordes redondeados */
+    
+    p {
+      margin: 5px 0; /* Espaciado entre párrafos */
+      color: #2c3e50; /* Color de texto oscuro */
+      font-size: 14px; /* Tamaño legible en mobile */
+    }
+  }
+  
+  /* GRID DE PROFESIONALES */
+  .gremios-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en mobile */
+    gap: 15px; /* Espacio entre elementos */
+    margin-top: 15px;
+  }
+  
+  /* ESTADO SIN RESULTADOS */
+  .sin-resultados {
+    text-align: center;
+    padding: 30px 0;
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    
+    h3 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    
+    p {
+      color: #7f8c8d; /* Color gris para texto secundario */
+      font-size: 14px;
+    }
+  }
+  
+  /* ------------------------- */
+  /* MEDIA QUERIES */
+  /* ------------------------- */
+  
+  /* TABLET (768px) */
+  @media (min-width: 768px) {
+    .gremios-lista-container {
+      padding: 15px; /* Padding ligeramente mayor */
+    }
+    
+    .gremios-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+      gap: 20px; /* Más espacio entre elementos */
+    }
+    
+    .resultados-busqueda p {
+      font-size: 15px; /* Texto ligeramente más grande */
+    }
+  }
+  
+  /* ESCRITORIO (1024px) */
+  @media (min-width: 1024px) {
+    .gremios-lista-container {
+      padding: 20px; /* Padding mayor para escritorio */
+    }
+    
+    .gremios-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+      gap: 25px; /* Espacio adicional */
+    }
+    
+    .sin-resultados {
+      padding: 40px 0; /* Más espacio vertical */
+    }
+  }

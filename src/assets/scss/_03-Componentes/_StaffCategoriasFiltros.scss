@@ -1,0 +1,86 @@
+/* 
+ * _StaffCategoriasFiltros.scss
+ * Estilos para el componente StaffCategoriasFiltros
+ * 
+ * ESTRUCTURA:
+ * 1. Contenedor principal
+ * 2. Estilos del título
+ * 3. Grid de filtros
+ * 4. Estilos de grupos de filtros
+ * 5. Media queries
+ */
+
+/* 1. CONTENEDOR PRINCIPAL */
+.filtros-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  /* 2. ESTILOS DEL TÍTULO */
+  .filtros-titulo {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    
+    .icono {
+      color: #e74c3c;
+      margin-right: 8px;
+      font-size: 18px;
+    }
+  }
+  
+  /* 3. GRID DE FILTROS */
+  .filtros-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  /* 4. GRUPOS DE FILTROS */
+  .filtro-group {
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #34495e;
+      font-weight: 500;
+    }
+    
+    select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background-color: white;
+      font-size: 14px;
+      color: #333;
+      cursor: pointer;
+      
+      &:focus {
+        outline: none;
+        border-color: #e74c3c;
+      }
+    }
+  }
+  
+  /* 5. MEDIA QUERIES */
+  @media (min-width: 768px) {
+    .filtros-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .filtros-container {
+      padding: 20px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .filtro-group select {
+      padding: 10px 12px;
+    }
+  }

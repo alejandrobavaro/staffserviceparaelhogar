@@ -1,0 +1,40 @@
+.developer-credit {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.developer-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #fff;
+    background-color: #3a3a3a;
+    transform: scale(1.05);
+  }
+}
+
+.developer-icon {
+  font-size: 1rem;
+  color: #6d78ff;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .developer-link {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .developer-link {
+    font-size: 1.1rem;
+  }
+}
